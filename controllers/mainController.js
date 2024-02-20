@@ -1,6 +1,5 @@
 const bcrypt = require('bcrypt');
 const db = require('../database/models');
-const Productoras = require('../models/Productoras');
 
 const mainController = {
 
@@ -58,40 +57,35 @@ const mainController = {
           res.locals.errors = errors;
           res.render('registro')
       }
-      /*
-    else{ 
-      console.log(info)
-    
-      db.Productoras.findOne({where:[{email: info.email}]})
-      .then(function (result) {
-        if (result != undefined) {
-          errors.message = "El email ingresado ya esta registrado";
-          res.locals.errors = errors;
-          return res.render("registro");
-        }*/
-        else{
-      let Productora = {
-          nombre: info.nombre,
-          contrasena: bcrypt.hashSync(info.contrasena, 10),
-          email: info.email,
-          remember_token: "false"
-        }}
-        db.Productoras.create(Productora)
+      else{
+        let nuevaProductora = {
+              nombre: info.nombre,
+              contrasena: bcrypt.hashSync(info.contrasena, 10),
+              email: info.email
+        }
+
+        db.Productoras.create(nuevaProductora)
         .then((result) => {
           console.log(result)
           return res.redirect('/login')
-       })
+      })
         .catch((error)=> {
-          let errors = {};
-          console.log(error);
-          errors.message = "El campo email esta repetido";
-          res.locals.errors = errors;
-          return res.redirect("registro")
+
+          error.errors.forEach(item => {
+
+            if (item.validatorKey == "not_unique") {
+              let errors = {};
+              console.log(error);
+              errors.message = "El email está repetido";
+              res.locals.errors = errors;
+              return res.render('registro')
+            }
+            
+          });
+
         });
       }
-      // })
-      ,
-
+      }
 }
     
 module.exports = mainController;
