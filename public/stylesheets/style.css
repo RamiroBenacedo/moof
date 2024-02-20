@@ -1,0 +1,150 @@
+header{
+  background-color: #1b1b1b;
+}
+
+body{
+  margin:0;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  min-height: 75px;
+  align-items: center;
+  box-shadow: 10px;
+}
+
+.logoheader{
+  max-width: 100px;
+  max-height: 50px;
+  display: flex;
+  margin-left: 10px;
+}
+
+.searchInput{
+  width: 500px;
+  color: #d7d7d7;
+  background-color: #3b3b3b;
+  border-radius: 7px;
+  
+}
+
+.navButton{
+  text-decoration: none;
+  color: #d7d7d7;
+  margin-left: 10px;
+  margin-right: 20px;
+  font-weight: bold;
+  transition: ease-in-out;
+}
+
+.navButton:hover{
+  color: rgb(255, 255, 255);
+}
+
+.catPopu1{
+  height: 250px;
+  width: 250px;
+  background-image: url('../images/fiesta.jpg');
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.catPopu1:hover{
+  height: 265px;
+  width: 265px;
+}
+
+.catPopu2{
+  height: 250px;
+  width: 250px;
+  background-image: url('../images/deportes.png');
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.catPopu2:hover{
+  height: 265px;
+  width: 265px;
+}
+
+.catPopu3{
+  height: 250px;
+  width: 250px;
+  background-image: url('../images/conferencia.png');
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.catPopu3:hover{
+  height: 265px;
+  width: 265px;
+}
+
+.catPopu4{
+  height: 250px;
+  width: 250px;
+  background-image: url('../images/concierto.png');
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.catPopu4:hover{
+  height: 265px;
+  width: 265px;
+}
+
+.subContenedorCatPopu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 83%;
+}
+
+.contenedorCatPopu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.cat{
+  color: #ffffff;
+  margin: 20px;
+}
+
+.textoCatPopu{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 83%;
+}
+
+.linkCat{
+  text-decoration: none;
+}
