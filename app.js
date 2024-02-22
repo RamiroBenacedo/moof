@@ -1,17 +1,17 @@
 var createError = require('http-errors');
 var express = require('express');
+const db= require("./database/models");
 var path = require('path');
-const db= require("./database/models")
-var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+const session = require('express-session');
+const bcrypt = require('bcrypt');
 
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
-var path = require('path')
 
 const static = require('express-static');
 
@@ -25,9 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/public/images/', express.static('./public/images'));
 app.use('/public/stylesheets/', express.static('./public/stylesheets'));
-
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use(session({secret:"MyApp",resave:false,saveUninitialized:true}));
 
 // conexion sequelize
 const { Sequelize } = require('sequelize');
@@ -44,12 +42,12 @@ app.use(function (req,res,next) {
   return next();
 })
 
-// cookies
+/*cookies*/
 app.use(function (req,res,next) {
   if (req.cookies.userId != undefined && req.session.user == undefined) {
-    let idProductoraCookie = req.cookies.userId;
+    let idUsuarioCookie = req.cookies.userId;
     
-    db.Productoras.findByPk(idProductoraCookie)
+    db.Productora.findByPk(idUsuarioCookie)
     .then (function (user) {
       req.session.user = user.dataValues;
       res.locals.user = user.dataValues;
@@ -63,11 +61,8 @@ app.use(function (req,res,next) {
   }
 });
 
-// session
-const session = require('express-session');
-app.use(session({ secret: "moof",
-                  resave: false,
-                  saveUninitialized: true}))
+app.use('/', indexRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
