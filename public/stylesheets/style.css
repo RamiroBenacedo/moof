@@ -273,7 +273,7 @@ nav{
 }
 
 .ingresoForm{
-  width: 100%;
+  width: 40vh;
 }
 
 .contenedorIngreso{
@@ -294,7 +294,6 @@ nav{
   align-items: start;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
 }
 
 .dropdown-center{

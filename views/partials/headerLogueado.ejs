@@ -1,17 +1,26 @@
-<header>
+<header class="navbar">
     <nav class="navbar">
 
         <div class="navbarLeft">
             <a href="/"><img src="../public/images/moof-logo-blanco.png" alt="" class="logoheader"></a>
         </div>
 
-        <div class="optionsNavbar">
-            <a href="/crearEvento" class="navButton">Crear Evento</a>
-            <a href="/features" class="navButton">Features</a>
-            <a href="/partners" class="navButton">Partners</a>
-            <a href="/miProductora" class="navButton"><%= locals.user.nombre %></a>
-            <a href="/logout" class="navButton">LogOut</a>
+        <div class="dropdown-center">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <%= locals.user.nombre %>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/miProductora">Mi Productora</a></li>
+              <li><a class="dropdown-item" href="/crearEvento">Crear Evento</a></li>
+              <li><a class="dropdown-item" href="/features">Features</a></li>
+              <li><a class="dropdown-item" href="/partners">Partners</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/logout">Cerrar Sesión</a></li>
+              
+            </ul>
         </div>
+
+        
 
     </nav>
 </header>
