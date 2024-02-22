@@ -4,14 +4,20 @@ header{
 
 body{
   margin:0;
+  background-color: #f6f6f6;
+}
+
+.navbarLeft{
+  margin-left: 7vh;
 }
 
 nav{
   display: flex;
   justify-content: space-between;
-  min-height: 75px;
+  height: 8vh;
   align-items: center;
   box-shadow: 10px;
+  width: 100vw;
 }
 
 .logoheader{
@@ -147,4 +153,151 @@ nav{
 
 .linkCat{
   text-decoration: none;
+}
+
+.registroDiv{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mainRegistro{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3vh;
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
+.creaTuCuenta{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.crea{
+  font-weight: bold;
+  font-size: 300%;
+}
+
+.bodyRegistro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registroForm{
+  width: 100%;
+}
+
+.textoRegistro{
+  margin-bottom: 0;
+  font-size: x-large;
+}
+
+.contenedorRegistro{
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.input{
+  width: 100%;
+  height: 4vh;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(217, 217, 217);
+  font-size: larger;
+}
+
+.submit{
+  width: 100%;
+  height: 5vh;
+  font-weight: bold;
+  background-color: #3b3b3b;
+  color: #ffffff;
+  border-radius:10px;
+  border: none;
+  margin-top: 2vh;
+}
+
+.recorda{
+  text-align: center;
+  margin-top: 2vh;
+  width: 100%;
+}
+
+.yaTenes{
+  text-align: center;
+  margin-top: 1vh;
+  width: 100%;
+}
+
+.linkkk{
+  text-decoration: none;
+  outline: none;
+}
+
+.ingresaATuCuenta{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.ingresa{
+  font-weight: bold;
+  font-size: 300%;
+}
+
+.bodyIngreso{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainIngreso{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3vh;
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
+.ingresoForm{
+  width: 100%;
+}
+
+.contenedorIngreso{
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.textoIngreso{
+  margin-bottom: 0;
+  font-size: x-large;
+}
+
+.ingresoDiv{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dropdown-center{
+  margin-right: 10vh;
+  border-radius: 15px;
 }

@@ -14,25 +14,42 @@
         <% } else { %>
             <%- include('./partials/header') %>
         <!-- <% } %> -->
-
-        <main>
-            <section class="center main-content">
-            <h1>Registrate</h1>
-            <form action= "/registro" method="POST">
+        
+        <div class="bodyRegistro">
+        <main class="mainRegistro">
+            <section class="registroDiv">
+            <div class="creaTuCuenta">
+            <h1 class="crea">Creá</h1>
+            <h1 class="crea">tu cuenta</h1>
+            </div>
+            <form class="registroForm" action= "/registro" method="POST">
                 <% if (locals.errors) { %>
                     <p class="mensajee-error"><%= locals.errors.message %></p>
                   <% } %>
-                <label  for="email"> Email:</label>
-                <input  type="email" class="input" id="email" name="email" value="" ><br>
-    
-                <label  for="nombre"> Usuario:</label>
-                <input  type="text" class="input" id="nombre" name="nombre" value="" ><br>
-    
-                <label  for="clave"> Contraseña:</label>
-                <input  type="password" class="input" id="contrasena" name="contrasena" value="" ><br>
-              
-                <button type="submit" class="submit">Crear</button>
+
+                <div class="contenedorRegistro">
+                <p class="textoRegistro">Email</p>
+                <label  for="email"></label>
+                <input  type="email" class="input" id="email" name="email" value="">
+                </div>
+
+                <div class="contenedorRegistro">
+                <p class="textoRegistro">Usuario</p>
+                <label  for="nombre"> </label>
+                <input  type="text" class="input" id="nombre" name="nombre" value="">
+                </div>
+                
+                <div class="contenedorRegistro">
+                <p class="textoRegistro">Contraseña</p>
+                <label  for="clave"></label>
+                <input  type="password" class="input" id="contrasena" name="contrasena" value="">
+                </div>
+                
+                <button type="submit" class="submit">Crear cuenta</button>
               </form>
+              
+              <p class="recorda">Recorda que no es necesario crear tu cuenta para comprar tus tickets!</p>
+              <p class="yaTenes">Ya tenes cuenta? <a href="/login" class="linkkk">Ingresa acá</a></p>
             </section>
         </main>
     

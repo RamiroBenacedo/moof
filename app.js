@@ -1,7 +1,10 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+const db= require("./database/models")
+var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
@@ -28,9 +31,36 @@ app.use('/users', usersRouter);
 
 // conexion sequelize
 const { Sequelize } = require('sequelize');
-const sequelize = new Sequelize('moof', 'root', null, {
+const sequelize = new Sequelize('moof', 'root', "root", {
   host: 'localhost',
   dialect: 'mysql'
+});
+
+app.use(function (req,res,next) {
+  if (req.session.user != undefined) {
+    res.locals.user = req.session.user;
+    return next();
+  }
+  return next();
+})
+
+// cookies
+app.use(function (req,res,next) {
+  if (req.cookies.userId != undefined && req.session.user == undefined) {
+    let idProductoraCookie = req.cookies.userId;
+    
+    db.Productoras.findByPk(idProductoraCookie)
+    .then (function (user) {
+      req.session.user = user.dataValues;
+      res.locals.user = user.dataValues;
+      return next();
+    })
+    .catch(function(error) {
+      return res.send (error);
+    })
+  } else {
+    return next();
+  }
 });
 
 // session

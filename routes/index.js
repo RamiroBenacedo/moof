@@ -12,6 +12,8 @@ router.get('/features', mainController.features);
 router.get('/partners', mainController.partners);
 
 router.get('/login', mainController.login);
+router.post('/login', mainController.loginPost);
+router.get('/logout', mainController.logout);
 
 router.get('/registro', mainController.registro);
 router.post('/registro', mainController.store);

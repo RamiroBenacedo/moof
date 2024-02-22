@@ -14,30 +14,37 @@
         <% } else { %>
             <%- include('./partials/header') %>
         <!-- <% } %> -->
-     
-        <main>
-            <section class="center main-content">
-                <h1>LogIn</h1>
-                <form action="/login" method="POST">
+            
+        <div class="bodyIngreso">
+        <main class="mainIngreso">
+            <section class="ingresoDiv">
+                <div class="ingresaATuCuenta">
+                <h1 class="ingresa">Ingresá</h1>
+                <h1 class="ingresa">a tu cuenta</h1>
+                </div>
+                <form action="/login" method="POST" class="ingresoForm">
                     <% if (locals.errors) { %>
                         <p><%= locals.errors.message %></p>
                       <% } %>
-                    <label  for="email"> Email:</label>
-                    <input  type="email" id="email" name="email" value="">
+
+                    <div class="contenedorIngreso">
+                    <p class="textoIngreso">Email</p>
+                    <label  for="email"></label>
+                    <input  class='input' type="email" id="email" name="email" value="">
+                    </div>
                     
-                    <label  for="clave"> Clave:</label>
-                    <input  type="password" id="contrasena" name="contrasena" value="">
-                    
-                    <article>
-                        <label for="rememberMe">Recordarme</label>
-                        <input id="rememberMe" class="input" type="checkbox" name="rememberMe" value=""><br>
-                    </article>
+                    <div class="contenedorIngreso">
+                    <p class="textoIngreso">Contraseña</p>
+                    <label  for="clave"></label>
+                    <input  class='input' type="password" id="contrasena" name="contrasena" value="">
+                    </div>
                     
 
-                    <button type="submit">Enviar</button>
+                    <button class='submit' type="submit">Enviar</button>
                 </form>
             </section>
         </main>
+        </div>
 
 </body>
 </html>
