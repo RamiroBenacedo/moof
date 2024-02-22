@@ -273,7 +273,7 @@ nav{
 }
 
 .ingresoForm{
-  width: 40vh;
+  width: 40vw;
 }
 
 .contenedorIngreso{
@@ -298,5 +298,26 @@ nav{
 
 .dropdown-center{
   margin-right: 10vh;
-  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.btn-secondary{
+  border-radius: 20px;
+  background-color: #3b3b3b;
+}
+
+@media (max-width: 768px) {
+  .ingresoForm{
+    width: 80vw;
+  }
+  .navbarLeft{
+    margin-left: 3vh;
+  }
+  .dropdown-center{
+    margin-right: 9vh;
+    border-radius: 15px;
+  }
 }
