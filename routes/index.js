@@ -1,11 +1,16 @@
 var express = require('express');
 var router = express.Router();
 const mainController = require('../controllers/mainController')
+const prodController = require('../controllers/prodController')
 
 /* GET home page. */
 router.get('/', mainController.index);
+router.get('/index', mainController.index);
 
-router.get('/crearEvento', mainController.crearEvento);
+router.get('/crearEvento', prodController.crearEvento);
+router.get('/crearEvento', prodController.relacionesPublicas);
+
+router.get('/miProductora', prodController.miProductora);
 
 router.get('/features', mainController.features);
 

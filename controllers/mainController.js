@@ -5,12 +5,9 @@ const mainController = {
 
     index: function (req, res){
         res.render('index')
-    }
-    ,
-    
-    crearEvento: function (req, res){
-        res.render('crearEvento')
     },
+    
+    
 
     features: function (req, res){
         res.render('features')
@@ -28,7 +25,7 @@ const mainController = {
       }
     },
 
-    
+
         loginPost: (req, res) => {
           let emailBuscado = req.body.email;
           let contrasena = req.body.contrasena;   
@@ -87,7 +84,7 @@ const mainController = {
     logout: function (req, res) {
       req.session.destroy()
       res.clearCookie("userId")
-      return res.render("login")
+      return res.redirect("login")
       },
 
     registro: function (req, res){

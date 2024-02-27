@@ -1,5 +1,5 @@
 header{
-  background-color: #1b1b1b;
+  background-color: rgb(31, 31, 31);
 }
 
 body{
@@ -27,13 +27,7 @@ nav{
   margin-left: 10px;
 }
 
-.searchInput{
-  width: 500px;
-  color: #d7d7d7;
-  background-color: #3b3b3b;
-  border-radius: 7px;
-  
-}
+
 
 .navButton{
   text-decoration: none;
@@ -326,6 +320,106 @@ nav{
     margin-left: 2vh;
 }
 
+.dosForms{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 80vw;
+}
+
+.padreCrearEvento{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.textCrearEvento{
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+}
+
+#form1{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  margin-right: 2.5vw;
+  height: 50vh;
+}
+#form2{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  border-radius: 20px;
+  margin-left: 2.5vw;
+  height: 50vh;
+}
+
+.textoFormu{
+  color: #1e1e1e;
+  margin-bottom: 1vh;
+  font-weight: 700;
+  font-size: large;
+}
+
+.bodyCrearEvento{
+  background-color: #f4f4f4;
+}
+
+.creaTuEvento{
+  color: #242424;
+  font-size: 15vh;
+  font-weight: bolder;
+}
+
+.inputCrearEvento{
+  background-color: rgb(186, 186, 186);
+  border-radius: 10px;
+  width: 100%;
+  border-color: none;
+  border: none;
+  height: 4.3vh;
+  transition: ease-in-out;
+}
+
+.inputCrearEvento:focus-within{
+  height: 6.3vh;
+  transition: ease-in-out;
+}
+
+.formu{
+height: 100%;
+width: 42vw;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.textCrearEvento{
+  display: flex;
+  flex-direction: row;
+}
+
+.creaTuEventoo{
+  color: rgb(46, 202, 90);
+  font-size: 15vh;
+  font-weight: bolder;
+  margin-left: 3.5vh;
+  border-bottom: rgb(46, 202,90);
+  text-decoration: underline;
+}
+
+#aaa:hover{
+  color: rgb(45, 212, 39);
+  transition: ease-in-out;
+}
+
 @media (max-width: 768px) {
   .ingresoForm{
     width: 80vw;
@@ -336,5 +430,77 @@ nav{
   .dropdown-center{
     margin-right: 9vh;
     border-radius: 15px;
+  }
+
+  #carouselExampleAutoplaying{
+    width: 80vw;
+    height: 45vh;
+  }
+}
+
+.centrarCaro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0;
+
+}
+
+.moof-bar {
+  width: 100vw;
+  height: 5vh;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #242424;
+}
+
+.moof {
+  display: inline-block;
+  height: 4vh;
+  margin-right: 5px;
+  animation: moof-animation 5s linear infinite backwards;
+  color: #f4f4f4;
+  font-weight: bolder;
+  font-size: large;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+@keyframes moof-animation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.eventosDestacados {
+  width: 100vw;
+  height: 5vh;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: rgb(36, 36, 36);
+}
+
+.eventosDesta {
+  display: inline-block;
+  height: 100%;
+  margin-right: 5px;
+  animation: eventosDesta-animation 5s linear infinite forwards;
+  color: #f4f4f4;
+  font-weight: 200;
+  font-size: 3vh;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+@keyframes eventosDesta-animation {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }

@@ -6,6 +6,13 @@ module.exports = function (sequelize, dataTypes) {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
+        id_prod: {
+            type: dataTypes.INTEGER,
+            foreignKey: {
+                model: '/Productoras.js',
+                key: 'id',
+              }
+        },
         nombre: {
             type: dataTypes.STRING
         },
@@ -25,6 +32,9 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING,
         },
         imagen: {
+            type: dataTypes.STRING,
+        },
+        video: {
             type: dataTypes.STRING,
         },
         createdAt: {
@@ -49,7 +59,7 @@ module.exports = function (sequelize, dataTypes) {
     Eventos.associate = function (models) {
         Eventos.belongsTo(models.Productoras, {
             as: "eventos",
-            foreignKey: "productora_id",
+            foreignKey: "id_prod",
         })
     }
     return Eventos;
