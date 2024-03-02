@@ -51,6 +51,29 @@
                         <input type="text" name="video" class="inputCrearEvento">
                     </form>
                     </div>
+
+                    <% if (result != null) { %>
+                        <ul>
+                          <% for (const rrpp of result) { %>
+                            <li>
+                              <p><strong>Nombre:</strong> <%= Rrpp.nombre %></p>
+                              <p><strong>Apellido:</strong> <%= Rrpp.apellido %></p>
+                            </li>
+                          <% } %>
+                        </ul>
+                    <% } else { %>
+                        <p>No hay RRPPs para mostrar.</p>
+                          <% } %>
+
+                    
+                    <button onclick="enviarAmbosFormularios()">Crear</button>
+
+                    <script>
+                        function enviarAmbosFormularios() {
+                            document.getElementById('form1').submit();
+                            document.getElementById('form2').submit();
+                          }
+                    </script>    
                 
 
                 </div>

@@ -1,10 +1,9 @@
 header{
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(37, 37, 37);
 }
 
 body{
   margin:0;
-  background-color: #f6f6f6;
 }
 
 .navbarLeft{
@@ -42,111 +41,60 @@ nav{
   color: rgb(255, 255, 255);
 }
 
-.catPopu1{
-  height: 250px;
-  width: 250px;
-  background-image: url('../images/fiesta.jpg');
-  background-size: cover;
-  border-radius: 10px;
+.textoIndex{
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-}
-
-.catPopu1:hover{
-  height: 265px;
-  width: 265px;
-}
-
-.catPopu2{
-  height: 250px;
-  width: 250px;
-  background-image: url('../images/deportes.png');
-  background-size: cover;
-  border-radius: 10px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-}
-
-.catPopu2:hover{
-  height: 265px;
-  width: 265px;
-}
-
-.catPopu3{
-  height: 250px;
-  width: 250px;
-  background-image: url('../images/conferencia.png');
-  background-size: cover;
-  border-radius: 10px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-}
-
-.catPopu3:hover{
-  height: 265px;
-  width: 265px;
-}
-
-.catPopu4{
-  height: 250px;
-  width: 250px;
-  background-image: url('../images/concierto.png');
-  background-size: cover;
-  border-radius: 10px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-}
-
-.catPopu4:hover{
-  height: 265px;
-  width: 265px;
-}
-
-.subContenedorCatPopu{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  width: 83%;
-}
-
-.contenedorCatPopu{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
-.cat{
+.imagencelu{
+  margin-bottom: 0;
+  height: 40vh;
+}
+
+.creaEventoBoton{
+  background-color: #e4e4e4;
+  margin-top: 3.5vh;
+  color: #1e1e1e;
+  padding: 1.5vh;
+  font-size: large;
+  font-weight: 400;
+  border-radius: 15px;
+}
+
+#subrayado{
+  text-decoration-line: underline;
+  color: rgb(54, 228, 48);
+  font-weight: 500;
+  font-size: 6vh;
+}
+
+.descripcionIndex{
   color: #ffffff;
-  margin: 20px;
+  margin-top: 0.25vh;
+  margin-bottom: 0.25vh;
+  font-weight: 400;
+  font-size: large;
 }
 
-.textoCatPopu{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 83%;
+.botonCreaEvento{
+  color: #1e1e1e;
+  background-color: #ffffff;
+  border-radius: 14px;
 }
 
-.linkCat{
-  text-decoration: none;
+#optimiza{
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 6vh;
+  margin-top: 4vh;
+}
+
+#manejo{
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 6vh;
 }
 
 .registroDiv{
@@ -406,6 +354,24 @@ justify-content: space-between;
   flex-direction: row;
 }
 
+.descripcion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4vh;
+}
+
+.indexBody{
+  background-image: url("../images/fondoo.png");
+  width: 100vw;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 .creaTuEventoo{
   color: rgb(46, 202, 90);
   font-size: 15vh;
@@ -447,60 +413,62 @@ justify-content: space-between;
 
 }
 
-.moof-bar {
-  width: 100vw;
-  height: 5vh;
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: #242424;
+.featuresBody{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.moof {
-  display: inline-block;
+.contenedorFeatures{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 17vh;
+  background-color: rgb(32, 32, 32);
+  margin-bottom: 2vh;
+  border-radius: 15px;
+  transition: ease-in-out 0.2s;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contenedorFeatures:hover{
+  width: 85vw;
+  height: 20vh;
+  transition: all 0.5s ease;
+}
+
+.fotoFeat{
+  width:9vw;
   height: 4vh;
-  margin-right: 5px;
-  animation: moof-animation 5s linear infinite backwards;
-  color: #f4f4f4;
-  font-weight: bolder;
-  font-size: large;
-  margin-bottom: 2px;
-  margin-top: 2px;
+  background-color: rgb(40, 246, 54);
+  padding: 0.5vh;
+  border-radius: 12px;
 }
 
-@keyframes moof-animation {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+.contenedorArriba{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 20%;
 }
 
-.eventosDestacados {
-  width: 100vw;
-  height: 5vh;
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: rgb(36, 36, 36);
-}
-
-.eventosDesta {
-  display: inline-block;
-  height: 100%;
-  margin-right: 5px;
-  animation: eventosDesta-animation 5s linear infinite forwards;
-  color: #f4f4f4;
-  font-weight: 200;
+.tituloFeat{
   font-size: 3vh;
-  margin-bottom: 2px;
-  margin-top: 2px;
+  color: #ffffff;
 }
 
-@keyframes eventosDesta-animation {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
+.textoFeat{
+  width: 85%;
+  color: #ffffff;
+  margin-top: 2vh;
+}
+
+.textoFeatures{
+  margin: 4vh;
+  font-size: 4vh;
+  font-weight: 600;
 }

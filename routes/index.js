@@ -7,10 +7,9 @@ const prodController = require('../controllers/prodController')
 router.get('/', mainController.index);
 router.get('/index', mainController.index);
 
-router.get('/crearEvento', prodController.crearEvento);
-router.get('/crearEvento', prodController.relacionesPublicas);
+router.get('/crearEvent/id/:id', prodController.relacionesPublicas);
 
-router.get('/miProductora', prodController.miProductora);
+router.get('/miProductora/id/:id', prodController.miProductora);
 
 router.get('/features', mainController.features);
 

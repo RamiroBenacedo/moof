@@ -8,66 +8,88 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
-<body>
+<body >
     <% if (locals.user !=undefined) { %>
         <%- include('./partials/headerLogueado') %>
         <% } else { %>
             <%- include('./partials/header') %>
         <% } %>
-        
-        <div class="centrarCaro">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="height: 55vh; width: 100vw;">
-            <div class="carousel-inner" style="height: 55vh; width: 100vw;">
-              <div class="carousel-item active" style="height: 55vh; width: 100vw; ">
-                <img src="../public/images/fotito1.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" style="height: 55vh; width: 100vw;">
-                <img src="../public/images/fotito2.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" style="height: 55vh; width: 100vw; ">
-                <img src="../public/images/fotito3.png" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-        </div>  
+    
+    <div class="indexBody">
+        <div class="textoIndex">
+        <h1 id="optimiza">Optimiza</h1>
+        <h1 id="manejo">el manejo de</h1>
+        <h1 id="subrayado">tu evento</h1>
         </div>
 
-        <div class="eventosDestacados">
-            <span class="eventosDesta">Eventos destacados |</span>
-            <span class="eventosDesta">Eventos destacados |</span>
-            <span class="eventosDesta">Eventos destacados |</span>
-            <span class="eventosDesta">Eventos destacados |</span>
-            <span class="eventosDesta">Eventos destacados |</span>
-            <span class="eventosDesta">Eventos destacados |</span>
-            <span class="eventosDesta">Eventos destacados |</span>
-            <span class="eventosDesta">Eventos destacados |</span>
-            <span class="eventosDesta">Eventos destacados |</span>
-            <span class="eventosDesta">Eventos destacados |</span>
-            
-          </div>
+        <div class="descripcion">
+        <p class="descripcionIndex">Panel de control, dashboards, entradas QR. </p>
+        <p class="descripcionIndex">Con Moof el management de tu evento</p> 
+        <p class="descripcionIndex">nunca fue tan completo.</p>
+        </div>
 
-        <div class="moof-bar">
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-            <span class="moof"><img src="../public/images/moof-logo-blanco.png" class="moof" alt=""></span>
-          </div>
+        <div class="creaEventoBoton">Crea un evento</div>
 
+        <img src="../public/images/celumockup.png" alt="" class="imagencelu">
+    </div>
+
+    <div class="featuresBody">
+        <h1 class="textoFeatures">
+            Features
+        </h1>
+
+        <div class="contenedorFeatures" id="stats">
+            <div class="contenedorArriba">
+                <div class="tituloFeat">Control absoluto</div>
+                <img src="../public/images/line-chart.png" alt="" class="fotoFeat">
+            </div>
+            <p class="textoFeat">
+                Moof te ofrece la información más completa del evento en tiempo real a través de gráficos intuitivos.</p>
+
+        </div>
+
+        <div class="contenedorFeatures" id="cobros">
+
+            <div class="contenedorArriba">
+                <img src="../public/images/tax.png" alt="" class="fotoFeat">
+                <div class="tituloFeat">El costo más bajo</div>
+            </div>
+            <p class="textoFeat">En Moof te aseguramos el costo de servicio mas bajo del mercado.</p>
+
+        </div>
+
+        <div class="contenedorFeatures" id="ticketsT1">
+
+            <div class="contenedorArriba">
+                <div class="tituloFeat">Con o sin venta online</div>
+                <img src="../public/images/coins.png" alt="" class="fotoFeat">
+            </div>
+            <p class="textoFeat">Tenés la posibilidad de ofrecer entradas con venta online, o ocuparte por otro lado.</p>
+
+        </div>
+
+        <div class="contenedorFeatures" id="fiabilidad">
+
+            <div class="contenedorArriba">
+                <img src="../public/images/digital-services.png" alt="" class="fotoFeat">
+                <div class="tituloFeat">Seguridad</div>
+            </div>
+            <p class="textoFeat">Usamos las ultimas y mejores tecnologías para ofrecerte el servicio mas eficiente y seguro.</p>
+
+        </div>
+
+        <div class="contenedorFeatures" id="ticketsT1">
+
+            <div class="contenedorArriba">
+                <div class="tituloFeat">Servicio tecnico 24/7</div>
+                <img src="../public/images/wrench.png" alt="" class="fotoFeat">
+            </div>
+            <p class="textoFeat">Cualquier inconveniente o duda que tengas estamos para ayudarte.</p>
+
+        </div>
+
+
+    </div>
 
 </body>
 </html>
