@@ -272,7 +272,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   width: 80vw;
 }
 
@@ -284,8 +284,9 @@ nav{
 }
 
 .textCrearEvento{
-  margin-top: 6vh;
-  margin-bottom: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #form1{
@@ -300,12 +301,12 @@ nav{
 }
 #form2{
   display: flex;
-  align-items: start;
-  flex-direction: column;
-  justify-content: space-evenly;
   width: 100%;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
   border-radius: 20px;
-  margin-left: 2.5vw;
+  margin-right: 2.5vw;
   height: 50vh;
 }
 
@@ -314,16 +315,22 @@ nav{
   margin-bottom: 1vh;
   font-weight: 700;
   font-size: large;
+  width: 100%;
 }
 
 .bodyCrearEvento{
   background-color: #f4f4f4;
+  height: 100vh;
+  width: 100vw;
 }
 
 .creaTuEvento{
   color: #242424;
-  font-size: 15vh;
+  font-size: 8vh;
+  margin-top: 2vh;
   font-weight: bolder;
+  margin-bottom: 0;
+  margin-right: 0;
 }
 
 .inputCrearEvento{
@@ -343,7 +350,8 @@ nav{
 
 .formu{
 height: 100%;
-width: 42vw;
+width: 80vw;
+
 display: flex;
 align-items: center;
 justify-content: space-between;
@@ -351,7 +359,9 @@ justify-content: space-between;
 
 .textCrearEvento{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 .descripcion{
@@ -374,34 +384,17 @@ justify-content: space-between;
 
 .creaTuEventoo{
   color: rgb(46, 202, 90);
-  font-size: 15vh;
+  font-size: 8vh;
   font-weight: bolder;
-  margin-left: 3.5vh;
   border-bottom: rgb(46, 202,90);
   text-decoration: underline;
+  margin-top: -3vh;
+  margin-left: 0;
 }
 
 #aaa:hover{
   color: rgb(45, 212, 39);
   transition: ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .ingresoForm{
-    width: 80vw;
-  }
-  .navbarLeft{
-    margin-left: 3vh;
-  }
-  .dropdown-center{
-    margin-right: 9vh;
-    border-radius: 15px;
-  }
-
-  #carouselExampleAutoplaying{
-    width: 80vw;
-    height: 45vh;
-  }
 }
 
 .centrarCaro{

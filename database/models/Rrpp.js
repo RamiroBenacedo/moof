@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = "Rrpp";
+    let alias = "RrppAlias";
     let cols = {
         id: {
             autoIncrement: true,

@@ -42,7 +42,7 @@ module.exports = function (sequelize, dataTypes) {
     }
 
     Productoras.associate = function (models) {
-        Productoras.hasMany(models.Rrpp, {
+        Productoras.hasMany(models.RrppAlias, {
             as: "productoras",
         })
     }
