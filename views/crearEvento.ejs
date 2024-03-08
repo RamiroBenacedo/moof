@@ -22,47 +22,53 @@
                 <h1 class="creaTuEventoo"> evento</h1>
             </div>
 
-            <div class="dosForms">
+            <form class="registroForm" action= "/crearEvento" method="POST">
+                <% if (locals.errors) { %>
+                    <p class="mensajee-error"><%= locals.errors.message %></p>
+                  <% } %>
 
-                    <div class="formu">
-                    <form name="form1" id="form1">
-                      <p class="textoFormu">Nombre</p>
-                      <input type="text" name="nombre" class="inputCrearEvento">
-                      <p class="textoFormu">Capacidad</p>
-                      <input type="text" name="capacidad" class="inputCrearEvento">
-                      <p class="textoFormu">Ubicación</p>
-                      <input type="text" name="ubicacion" class="inputCrearEvento">
-                    </form>
-                    </div>
-
-                
-                    <div class="formu">
-                    <form name="form2" id="form2">
-                        <p class="textoFormu">Descripción</p>
-                        <input type="text" name="descripcion" class="inputCrearEvento">
-                        <p class="textoFormu">Lugar</p>
-                        <input type="text" name="venue" class="inputCrearEvento">
-                        <p class="textoFormu">Imagen</p>
-                        <input type="text" name="imagen" class="inputCrearEvento">
-                        <p class="textoFormu">Video</p>
-                        <input type="text" name="video" class="inputCrearEvento">
-                    </form>
-                    </div>
-                    
-                    <button onclick="enviarAmbosFormularios()">Crear</button>
-
-                    <script>
-                        function enviarAmbosFormularios() {
-                            document.getElementById('form1').submit();
-                            document.getElementById('form2').submit();
-                          }
-                    </script>    
-                
-
+                <div class="contenedorRegistro">
+                <p class="textoRegistro">Nombre</p>
+                <input  type="text" class="input" id="nombre" name="nombre" value="">
                 </div>
 
-            </div>
+                <div class="contenedorRegistro">
+                <p class="textoRegistro">Capacidad</p>
+                <input  type="text" class="input" id="capacidad" name="capacidad" value="">
+                </div>
+                
+                <div class="contenedorRegistro">
+                <p class="textoRegistro">Ubicacion</p>
+                <input  type="text" class="input" id="ubicacion" name="ubicacion" value="">
+                </div>
 
+                <div class="contenedorRegistro">
+                <p class="textoRegistro">categoria</p>
+                <input  type="text" class="input" id="categoria" name="categoria" value="">
+                </div>
+    
+                <div class="contenedorRegistro">
+                <p class="textoRegistro">descripcion</p>
+                <input  type="text" class="input" id="descripcion" name="descripcion" value="">
+                </div>
+                    
+                <div class="contenedorRegistro">
+                <p class="textoRegistro">venue</p>
+                <input  type="text" class="input" id="venue" name="venue" value="">
+                </div>
+
+                <div class="contenedorRegistro">
+                <p class="textoRegistro">imagen</p>
+                <input  type="text" class="input" id="imagen" name="imgaen" value="">
+                </div>
+                        
+                <div class="contenedorRegistro">
+                <p class="textoRegistro">video</p>
+                <input  type="text" class="input" id="video" name="video" value="">
+                </div>
+                
+                <button type="submit" class="submit">Crear cuenta</button>
+              </form>
             
 
         </div>

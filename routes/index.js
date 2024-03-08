@@ -7,7 +7,8 @@ const prodController = require('../controllers/prodController')
 router.get('/', mainController.index);
 router.get('/index', mainController.index);
 
-router.get('/crearEvent', prodController.crearEvento);
+router.get('/crearEvento/id/:id', prodController.crearEvento);
+router.post('/crearEvento', prodController.eventoStore);
 
 router.get('/miProductora/id/:id', prodController.miProductora);
 

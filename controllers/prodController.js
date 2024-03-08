@@ -7,13 +7,45 @@ const prodController = {
     },
 
     crearEvento: function (req, res){
-        if (req.session.user != undefined) {
-          return res.render('crearEvento')
-      } else {
-          return res.render('login')
+      console.log(req.params.id)
+      res.render('crearEvento')
+  },
+
+  eventoStore: function(req, res){
+    console.log("hola")
+    let info = req.body;
+    let idProd = req.params.id;
+    /* res.send(info) */
+    let errors = {}
+    if (info.nombre == ""){
+      errors.message = 'El nombre esta vacio'
+      res.locals.errors = errors;
+      return res.render('crearEvento')
+    } 
+    else{
+      let nuevoEvento = {
+        id_prod: idProd,
+        nombre: info.nombre,
+        capacidad: info.capacidad,
+        ubicacion: info.ubicacion,
+        categoria: info.categoria,
+        descripcion: info.descripcion,
+        venue : info.venue,
+        imagen: info.imagen,
+        video: info.video
       }
-    },
-    
+      console.log(nuevoEvento)
+      db.Eventos.create(nuevoEvento)
+      .then((result) => {
+        console.log(result)
+        return res.redirect('/index')
+      })
+      .catch((error) => {
+        return res.send(error);
+    })
+    }
+  }
+
     // el metodo relaciones publicas esta en la ruta de crearEvento tambien
 
     /* router.get('/crearEvento', prodController.crearEvento);
