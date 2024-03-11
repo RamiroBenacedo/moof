@@ -22,7 +22,7 @@
                 <h1 class="creaTuEventoo"> evento</h1>
             </div>
 
-            <form class="registroForm" action= "/crearEvento" method="POST">
+            <form class="registroForm" action= "/crearEvento/id/<%= id %>" method="POST">
                 <% if (locals.errors) { %>
                     <p class="mensajee-error"><%= locals.errors.message %></p>
                   <% } %>
@@ -59,7 +59,7 @@
 
                 <div class="contenedorRegistro">
                 <p class="textoRegistro">imagen</p>
-                <input  type="text" class="input" id="imagen" name="imgaen" value="">
+                <input  type="text" class="input" id="imagen" name="imagen" value="">
                 </div>
                         
                 <div class="contenedorRegistro">
@@ -67,7 +67,7 @@
                 <input  type="text" class="input" id="video" name="video" value="">
                 </div>
                 
-                <button type="submit" class="submit">Crear cuenta</button>
+                <button type="submit" class="submit">Crear evento</button>
               </form>
             
 

@@ -8,7 +8,11 @@ router.get('/', mainController.index);
 router.get('/index', mainController.index);
 
 router.get('/crearEvento/id/:id', prodController.crearEvento);
-router.post('/crearEvento', prodController.eventoStore);
+router.post('/crearEvento/id/:id', prodController.eventoStore);
+
+router.get('/hola/id/:id', prodController.entradas);
+router.post('/entradas/id/:id', prodController.entradasStore);
+
 
 router.get('/miProductora/id/:id', prodController.miProductora);
 
