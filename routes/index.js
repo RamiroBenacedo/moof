@@ -10,7 +10,7 @@ router.get('/index', mainController.index);
 router.get('/crearEvento/id/:id', prodController.crearEvento);
 router.post('/crearEvento/id/:id', prodController.eventoStore);
 
-router.get('/hola/id/:id', prodController.entradas);
+router.get('/entradas/id/:id', prodController.entradas);
 router.post('/entradas/id/:id', prodController.entradasStore);
 
 
