@@ -72,14 +72,14 @@ const prodController = {
         id_evento: idEvento,
         nombre: info.nombre,
         descripcion: info.descripcion,
-        precio: info.precio,
+        valor: info.valor,
         cantidad: info.cantidad,
       }
       console.log(nuevaEntrada)
-      db.Entradas.create(nuevaEntrada)
+      db.EntradasAlias.create(nuevaEntrada)
       .then((result) => {
         console.log(result)
-        return res.redirect('index')
+        return res.redirect('/index')
       })
       .catch((error) => {
         return res.send(error);

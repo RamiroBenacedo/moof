@@ -28,57 +28,57 @@ const mainController = {
 
         loginPost: (req, res) => {
           let emailBuscado = req.body.email;
-          let contrasena = req.body.contrasena;   
-      /*      res.send(contrasena)
-       */     let rememberMe=req.body.rememberMe;      
-          
-          let errors = {}
-          if (emailBuscado == ''){
-            errors.message ="El email esta vacio"
+          let contrasena = req.body.contrasena;
+          let rememberMe = req.body.rememberMe;
+
+          let errors = {};
+          if (emailBuscado == "") {
+            errors.message = "El email está vacío";
             res.locals.errors = errors;
-            return res.render('login')
-          }
-          else if (contrasena == "") {
-            errors.message = "El campo de contraseña esta vacio";
+            return res.render("login");
+          } else if (contrasena == "") {
+            errors.message = "El campo de contraseña está vacío";
             res.locals.errors = errors;
             return res.render("login");
           } else {
-              let criterio = {
-              where: [{email: emailBuscado}]
-          };
-      
-          db.Productoras.findOne(criterio)
-          .then((result) => {
-            if (result != null) {
-            let check =  bcrypt.compareSync(contrasena, result.contrasena)
-            console.log(check)
-            console.log(contrasena)
-            console.log(result.contrasena)
-      /*       return res.send(check)
-       */                    
-            if (check) {
-              req.session.user = result.dataValues;
-      /*         res.send(req.session.user)
-       */        
-              if (rememberMe) {
-              res.cookie('userId', result.id, {maxAge:1000 * 60 * 5})
-              res.send(rememberMe)
-              }
-              return res.redirect("index")}
-              else {
-                errors.message = "La contraseña es incorrecta";
-                res.locals.errors = errors;
-                return res.render("login")
-              }} 
-              else {
-                errors.message = "No existe el mail " + emailBuscado;
-                res.locals.errors = errors
-                res.render('login')
+            let criterio = {
+              where: [{ email: emailBuscado }],
+            };
+
+            db.Productoras.findOne(criterio)
+              .then((result) => {
+                if (result != null) {
+                  let check = bcrypt.compareSync(contrasena, result.contrasena);
+                  console.log(check);
+                  console.log(contrasena);
+                  console.log(result.contrasena);
+
+                  if (check) {
+                    req.session.user = result.dataValues;
+
+                    if (rememberMe) {
+                      // Set session expiration time to 7 days
+                      req.session.cookie.maxAge = 7 * 24 * 60 * 60 * 1000;
+                      res.cookie("userId", result.id, { maxAge: 7 * 24 * 60 * 60 * 1000 });
+                    }
+
+                    return res.redirect("index");
+                  } else {
+                    errors.message = "La contraseña es incorrecta";
+                    res.locals.errors = errors;
+                    return res.render("login");
+                  }
+                } else {
+                  errors.message = "No existe el correo " + emailBuscado;
+                  res.locals.errors = errors;
+                  res.render("login");
                 }
-                
-            }).catch((error) => {
+              })
+              .catch((error) => {
                 return res.send(error);
-            })}},
+              });
+          }
+        },
     
   
     logout: function (req, res) {
