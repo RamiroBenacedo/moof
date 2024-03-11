@@ -52,13 +52,14 @@ const prodController = {
   entradas: function(req, res){
     // console.log(req.params.id);
     // return res.render('entradas');
-    res.render("entradas")
+    //console.log(req.params.id)
+    res.render("entradas", {id: req.params.id})
   },
 
   entradasStore: function(req, res){
     console.log(req.params.id)
     let info = req.body;
-    let idEvento = req.query.id;
+    let idEvento = req.params.id;
     let errors = {}
     if (info.nombre == ""){
       errors.message = 'El nombre esta vacio'
@@ -77,9 +78,8 @@ const prodController = {
       console.log(nuevaEntrada)
       db.Entradas.create(nuevaEntrada)
       .then((result) => {
-        console.log(result.id)
-        console.log(idEvento)
-        return res.redirect(`index`)
+        console.log(result)
+        return res.redirect('index')
       })
       .catch((error) => {
         return res.send(error);

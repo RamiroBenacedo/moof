@@ -62,5 +62,12 @@ module.exports = function (sequelize, dataTypes) {
             foreignKey: "id_prod",
         })
     }
+    // Un evento tiene muchas entradas
+    Eventos.associate = function (models) {
+        Eventos.hasMany(models.EntradasAlias, {
+            as: "eventos",
+        })
+    }
+
     return Eventos;
 }

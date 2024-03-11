@@ -20,33 +20,33 @@
             Entradas
         </h1>
 
-        <form class="registroForm" action= "/entradas" method="POST">
+        <form class="registroForm" action="/entradas/id/<%= id %>" method="POST">
             <% if (locals.errors) { %>
                 <p class="mensajee-error"><%= locals.errors.message %></p>
-              <% } %>
+            <% } %>
 
             <div class="contenedorRegistro">
-            <p class="textoRegistro">Nombre</p>
-            <input  type="text" class="input" id="nombre" name="nombre" value="">
-            </div>
-
-            <div class="contenedorRegistro">
-            <p class="textoRegistro">Descripción</p>
-            <input  type="text" class="input" id="descripcion" name="descripcion" value="">
-            </div>
-            
-            <div class="contenedorRegistro">
-            <p class="textoRegistro">Precio</p>
-            <input  type="text" class="input" id="precio" name="precio" value="">
+                <p class="textoRegistro">Nombre</p>
+                <input type="text" class="input" id="nombre" name="nombre" value="">
             </div>
 
             <div class="contenedorRegistro">
-            <p class="textoRegistro">Cantidad</p>
-            <input  type="text" class="input" id="cantidad" name="cantidad" value="">
+                <p class="textoRegistro">Descripción</p>
+                <input type="text" class="input" id="descripcion" name="descripcion" value="">
             </div>
-            
+
+            <div class="contenedorRegistro">
+                <p class="textoRegistro">Precio</p>
+                <input type="text" class="input" id="precio" name="precio" value="">
+            </div>
+
+            <div class="contenedorRegistro">
+                <p class="textoRegistro">Cantidad</p>
+                <input type="text" class="input" id="cantidad" name="cantidad" value="">
+            </div>
+
             <button type="submit" class="submit">Generar entradas</button>
-          </form>
+        </form>
 
     
 </body>
