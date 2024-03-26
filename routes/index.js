@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const mainController = require('../controllers/mainController')
 const prodController = require('../controllers/prodController')
+const eventController = require('../controllers/eventController')
 
 /* GET home page. */
 router.get('/', mainController.index);
@@ -13,6 +14,8 @@ router.post('/crearEvento/id/:id', prodController.eventoStore);
 router.get('/entradas/id/:id', prodController.entradas);
 router.post('/entradas/id/:id', prodController.entradasStore);
 
+router.get('/evento', eventController.evento);
+router.get('/accionBoton', eventController.codigos);
 
 router.get('/miProductora/id/:id', prodController.miProductora);
 

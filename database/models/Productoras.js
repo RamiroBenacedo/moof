@@ -37,13 +37,13 @@ module.exports = function (sequelize, dataTypes) {
     // una productora tiene muchos eventos
     Productoras.associate = function (models) {
         Productoras.hasMany(models.Eventos, {
-            as: "productoras",
+            as: "ProductoraEvento",
         })
     }
 
     Productoras.associate = function (models) {
         Productoras.hasMany(models.RrppAlias, {
-            as: "productoras",
+            as: "ProductoraRrpp",
         })
     }
     return Productoras;

@@ -25,6 +25,15 @@ module.exports = function (sequelize, dataTypes) {
         cantidad: {
             type: dataTypes.INTEGER,
         },
+        createdAt: {
+            type: dataTypes.DATE,
+        },
+        updatedAt: {
+            type: dataTypes.DATE,
+        },
+        deletedAt: {
+            type: dataTypes.DATE,
+        }
     }
 
 
@@ -37,8 +46,8 @@ module.exports = function (sequelize, dataTypes) {
     // Una entrada pertenece a un evento 
     Entradas.associate = function (models) {
         Entradas.belongsTo(models.Eventos, {
-            as: "entradas",
-            foreignKey: "id_eventos",
+            as: "EntradaEvento",
+            foreignKey: "id_evento",
         })
     }
     return Entradas;

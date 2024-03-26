@@ -37,7 +37,7 @@ module.exports = function (sequelize, dataTypes) {
     // Un rrpp pertenece a una productora 
     Rrpp.associate = function (models) {
         Rrpp.belongsTo(models.Productoras, {
-            as: "rrpp",
+            as: "RrppProductora",
             foreignKey: "id_prod",
         })
     }

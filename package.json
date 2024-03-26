@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "aws-sdk": "^2.1585.0",
     "bcrypt": "^5.1.1",
     "bootstrap": "^5.3.3",
     "cookie-parser": "~1.4.4",
@@ -13,10 +14,15 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "express-session": "^1.18.0",
+    "fs": "^0.0.1-security",
     "http-errors": "~1.6.3",
+    "latest": "^0.2.0",
     "morgan": "~1.9.1",
+    "multer": "^1.4.5-lts.1",
     "mysql2": "^3.9.1",
-    "sequelize": "^6.37.0"
+    "qrcode": "^1.5.3",
+    "sequelize": "^6.37.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "express-static": "^1.2.6"

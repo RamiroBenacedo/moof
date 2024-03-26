@@ -41,7 +41,8 @@ const prodController = {
       console.log(nuevoEvento)
       db.Eventos.create(nuevoEvento)
       .then((result) => {
-        return res.redirect(`/entradas/id/${result.id}`)
+        id_evento = result.id
+        return res.redirect(`/entradas/id/${id_evento}`)
       })
       .catch((error) => {
         return res.send(error);
@@ -50,11 +51,27 @@ const prodController = {
   },
 
   entradas: function(req, res){
-    // console.log(req.params.id);
-    // return res.render('entradas');
-    //console.log(req.params.id)
     res.render("entradas", {id: req.params.id})
   },
+
+  /*entradas: function(req, res) {
+    let id= req.params.id;
+    let criterio = {
+        order: [['createdAt', 'DESC']], 
+        where: [{ id_evento: id }],
+        include: {
+          all: true,
+          nested: true
+        }
+      }
+    db.EntradasAlias.findAll(criterio)
+    .then(function(result){
+        return res.render('entradas', { id: req.params.id, entradas: result});
+    })
+    .catch(function (error) {
+        return res.send(error)
+    })
+  },*/
 
   entradasStore: function(req, res){
     console.log(req.params.id)
@@ -79,14 +96,16 @@ const prodController = {
       db.EntradasAlias.create(nuevaEntrada)
       .then((result) => {
         console.log(result)
-        return res.redirect('/index')
+        return res.redirect(`/entradas/id/${idEvento}`)
       })
       .catch((error) => {
         return res.send(error);
     })
     }
 
-}
+},
+
+  
 
 }
 

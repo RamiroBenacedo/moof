@@ -58,14 +58,12 @@ module.exports = function (sequelize, dataTypes) {
     // Un evento pertenece a una productora 
     Eventos.associate = function (models) {
         Eventos.belongsTo(models.Productoras, {
-            as: "eventos",
+            as: "EventoProductora",
             foreignKey: "id_prod",
-        })
-    }
-    // Un evento tiene muchas entradas
-    Eventos.associate = function (models) {
+        }),
+    
         Eventos.hasMany(models.EntradasAlias, {
-            as: "eventos",
+            as: "EventoEntrada",
         })
     }
 
